@@ -4,8 +4,4 @@
 	let { children } = $props();
 </script>
 
-<Layout2>
-	{#snippet main()}
-		{@render children()}
-	{/snippet}
-</Layout2>
+<Layout2 main={children} />

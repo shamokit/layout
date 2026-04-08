@@ -6,32 +6,35 @@
 
 	const pageSlug = $derived(page.url.pathname);
 	let { children } = $props();
+
+	const showAboutPageBanner = $derived(pageSlug === '/about');
+	const showBanner = $derived([showAboutPageBanner].some(Boolean));
 </script>
 
-<Layout1>
-	{#snippet navigation()}
-		<nav>
-			<ul class="flex items-center gap-4">
-				<li><a href="/">Home</a></li>
-				<li><a href="/about">About</a></li>
-				<li><a href="/contact">Contact</a></li>
-				<li><a href="/recruit">Recruit</a></li>
-			</ul>
-		</nav>
-	{/snippet}
-	{#snippet main()}
-		{@render children()}
-	{/snippet}
-	{#snippet sidebar()}
-		<p class="col-[2/-2]">Sidebar</p>
-	{/snippet}
-	{#snippet banner()}
-		{#if pageSlug === '/about'}
-			<FetchAboutPageBanner>
-				{#snippet children(props)}
-					<AboutPageBanner {...props} />
-				{/snippet}
-			</FetchAboutPageBanner>
-		{/if}
-	{/snippet}
-</Layout1>
+{#snippet navigation()}
+	<nav>
+		<ul class="flex items-center gap-4">
+			<li><a href="/">Home</a></li>
+			<li><a href="/about">About</a></li>
+			<li><a href="/contact">Contact</a></li>
+			<li><a href="/recruit">Recruit</a></li>
+		</ul>
+	</nav>
+{/snippet}
+{#snippet main()}
+	{@render children()}
+{/snippet}
+{#snippet sidebar()}
+	<p class="col-[2/-2]">Sidebar</p>
+{/snippet}
+{#snippet banner()}
+	{#if showAboutPageBanner}
+		<FetchAboutPageBanner>
+			{#snippet children(props)}
+				<AboutPageBanner {...props} />
+			{/snippet}
+		</FetchAboutPageBanner>
+	{/if}
+{/snippet}
+
+<Layout1 {navigation} {main} {sidebar} banner={showBanner ? banner : undefined} />

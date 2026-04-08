@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import { server } from 'typescript';
-	import './layout.css';
+	import './app.css';
+
+	//
 	let { children } = $props();
 </script>
 

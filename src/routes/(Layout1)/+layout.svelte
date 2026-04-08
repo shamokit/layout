@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import Layout1 from './@layout-components/Layout1.svelte';
-	import AboutPageBanner from '../../lib/features/aboutPageBanner/ui/AboutPageBanner.svelte';
-	import FetchAboutPageBanner from '../../lib/features/aboutPageBanner/ui/FetchAboutPageBanner.svelte';
+	import Layout1 from '$lib/shared/ui/@layout-components/(Layout1)/Layout1.svelte';
+	import AboutPageBanner from '$lib/features/aboutPageBanner/ui/AboutPageBanner.svelte';
+	import FetchAboutPageBanner from '$lib/features/aboutPageBanner/ui/FetchAboutPageBanner.svelte';
 
 	const pageSlug = $derived(page.url.pathname);
 	let { children } = $props();

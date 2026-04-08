@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Layout2 from './@layout-components/Layout2.svelte';
+	import Layout2 from '$lib/shared/ui/@layout-components/(Layout2)/Layout2.svelte';
 
 	let { children } = $props();
 </script>

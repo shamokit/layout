@@ -4,4 +4,5 @@
 	let { children } = $props();
 </script>
 
+<!-- レイアウトコンポーネントにはchildrenで基本渡さない。今後他のスニペットが追加された時にchildren部分と他のスニペット部分の見分けが少しだけつきにくくなるため -->
 <Layout2 main={children} />

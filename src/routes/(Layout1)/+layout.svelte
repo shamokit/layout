@@ -29,6 +29,8 @@
 {/snippet}
 {#snippet banner()}
 	{#if showAboutPageBanner}
+		<!-- データのfetchはこのコンポーネントが表示されない限り行われない。aboutページ以外でもこのコンポーネントのコードが読み込まれてしまうが、コンポーネント単体の容量は小さいかつレイアウト部分で追加で読み込むコンポーネントがそんなに重たい物である可能性も低いので許容する。 -->
+		<!-- JavaScriptに依存しても問題ない場合はコンポーネントをawait importすることでパフォーマンスの改善が見込める。 -->
 		<FetchAboutPageBanner>
 			{#snippet children(props)}
 				<AboutPageBanner {...props} />

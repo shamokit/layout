@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { LAYOUT1_AREAS } from './Layout1.svelte';
+	import { LAYOUT1_AREAS } from './GlobalLayout1.svelte';
 	import type { Snippet } from 'svelte';
 
 	let {

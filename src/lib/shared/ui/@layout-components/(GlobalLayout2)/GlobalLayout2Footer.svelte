@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { LAYOUT2_AREAS } from './Layout2.svelte';
+	import { LAYOUT2_AREAS } from './GlobalLayout2.svelte';
 
 	const uniqueId = $props.id();
 </script>

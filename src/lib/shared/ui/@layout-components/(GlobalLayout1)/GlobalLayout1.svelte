@@ -20,10 +20,10 @@
 
 <script lang="ts">
 	import { onMount, type Snippet } from 'svelte';
-	import Layout1Header from './Layout1Header.svelte';
-	import Layout1Footer from './Layout1Footer.svelte';
-	import Layout1Main from './Layout1Main.svelte';
-	import Layout1Sidebar from './Layout1Sidebar.svelte';
+	import Layout1Header from './GlobalLayout1Header.svelte';
+	import Layout1Footer from './GlobalLayout1Footer.svelte';
+	import Layout1Main from './GlobalLayout1Main.svelte';
+	import Layout1Sidebar from './GlobalLayout1Sidebar.svelte';
 
 	let {
 		main,

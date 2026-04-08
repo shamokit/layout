@@ -17,9 +17,9 @@
 
 <script lang="ts">
 	import { onMount, type Snippet } from 'svelte';
-	import Layout2Header from './Layout2Header.svelte';
-	import Layout2Main from './Layout2Main.svelte';
-	import Layout2Footer from './Layout2Footer.svelte';
+	import Layout2Header from './GlobalLayout2Header.svelte';
+	import Layout2Main from './GlobalLayout2Main.svelte';
+	import Layout2Footer from './GlobalLayout2Footer.svelte';
 	let {
 		main
 	}: {

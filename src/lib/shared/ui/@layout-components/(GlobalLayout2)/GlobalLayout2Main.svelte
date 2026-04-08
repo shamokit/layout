@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { LAYOUT1_AREAS } from './Layout1.svelte';
+	import { LAYOUT2_AREAS } from './GlobalLayout2.svelte';
 	import type { Snippet } from 'svelte';
 
 	let {
@@ -9,8 +9,8 @@
 	} = $props();
 </script>
 
-<main {...LAYOUT1_AREAS.MAIN}>
-	<div class="grid" {...LAYOUT1_AREAS.INNER}>
+<main {...LAYOUT2_AREAS.MAIN}>
+	<div class="grid place-items-start place-content-start" {...LAYOUT2_AREAS.INNER}>
 		{@render children?.()}
 	</div>
 </main>

@@ -1,9 +1,10 @@
 <script lang="ts">
 	import { page } from '$app/state';
+	import GlobalLayout from '$lib/shared/ui/@layout-components/GlobalLayout/GlobalLayout.svelte';
 	import './app.css';
 
-	//
 	let { children } = $props();
+	const pageRouteId = $derived(page.route.id);
 </script>
 
 <!-- メタはapp.d.tsのPageDataで型を共有し、+page.server.tsで設定する。 -->
@@ -13,7 +14,6 @@
 		<title>{page.data.meta.title}</title>
 	{/if}
 </svelte:head>
-
-<div class="contents" data-page-id={page.route.id}>
+<GlobalLayout {pageRouteId}>
 	{@render children()}
-</div>
+</GlobalLayout>

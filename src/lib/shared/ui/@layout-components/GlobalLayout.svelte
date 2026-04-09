@@ -222,7 +222,8 @@
 	:global(
 		:where([data-global-layout-area='root']):has(
 				[data-global-layout-area='left-sidebar']:not(:empty)
-			) :where([data-global-layout-area='contents'])
+			)
+			:where([data-global-layout-area='contents'])
 	) {
 		grid-column-start: left-sidebar-end;
 	}
@@ -233,7 +234,8 @@
 	:global(
 		:where([data-global-layout-area='root']):has(
 				[data-global-layout-area='right-sidebar']:not(:empty)
-			) :where([data-global-layout-area='contents'])
+			)
+			:where([data-global-layout-area='contents'])
 	) {
 		grid-column-end: right-sidebar-start;
 	}
@@ -244,7 +246,8 @@
 	:global(
 		:where([data-global-layout-area='root']):not(
 				:has([data-global-layout-area='main-visual']:not(:empty))
-			) :where([data-global-layout-area='contents'])
+			)
+			:where([data-global-layout-area='contents'])
 	) {
 		grid-row-start: main-visual-start;
 	}
@@ -302,7 +305,7 @@
 	============================================================ */
 	:global([data-global-layout-area='header']) {
 		background-color: ghostwhite;
-		padding: 1rem;
+		padding-block: 1rem;
 	}
 	:global([data-global-layout-area='main-visual']) {
 		background-color: skyblue;

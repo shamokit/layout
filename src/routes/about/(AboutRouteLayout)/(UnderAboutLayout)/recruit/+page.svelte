@@ -4,7 +4,7 @@
 	import GlobalLayoutMainVisual from '$lib/shared/ui/@layout-components/GlobalLayoutMainVisual.svelte';
 </script>
 
-<main class="contents">
+<main class="contents" role="main">
 	<GlobalLayoutMainVisual>
 		{#snippet mainVisual(props)}
 			<div {...props}>
@@ -20,7 +20,7 @@
 	</GlobalLayoutMainVisual>
 	<GlobalLayoutContents>
 		{#snippet contents(props)}
-			<main {...props}>
+			<div {...props}>
 				<GlobalLayoutInner>
 					{#snippet inner(props)}
 						<div {...props}>
@@ -28,7 +28,7 @@
 						</div>
 					{/snippet}
 				</GlobalLayoutInner>
-			</main>
+			</div>
 		{/snippet}
 	</GlobalLayoutContents>
 </main>

@@ -28,7 +28,7 @@
 		</header>
 	{/snippet}
 </GlobalLayoutHeader>
-<main class="contents">
+<main class="contents" role="main">
 	<GlobalLayoutMainVisual>
 		{#snippet mainVisual(mainVisualProps)}
 			<div {...mainVisualProps}>

@@ -1,7 +1,7 @@
 <script lang="ts">
-	import GlobalLayoutInner from '$lib/shared/ui/@layout-components/GlobalLayout/GlobalLayoutInner.svelte';
-	import GlobalLayoutHeader from '$lib/shared/ui/@layout-components/GlobalLayout/GlobalLayoutHeader.svelte';
-	import GlobalLayoutRightSidebar from '$lib/shared/ui/@layout-components/GlobalLayout/GlobalLayoutRightSidebar.svelte';
+	import GlobalLayoutInner from '$lib/shared/ui/@layout-components/GlobalLayoutInner.svelte';
+	import GlobalLayoutHeader from '$lib/shared/ui/@layout-components/GlobalLayoutHeader.svelte';
+	import GlobalLayoutRightSidebar from '$lib/shared/ui/@layout-components/GlobalLayoutRightSidebar.svelte';
 	let { children } = $props();
 </script>
 

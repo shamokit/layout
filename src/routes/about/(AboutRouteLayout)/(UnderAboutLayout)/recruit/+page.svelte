@@ -1,7 +1,7 @@
 <script lang="ts">
-	import GlobalLayoutContents from '$lib/shared/ui/@layout-components/GlobalLayout/GlobalLayoutContents.svelte';
-	import GlobalLayoutInner from '$lib/shared/ui/@layout-components/GlobalLayout/GlobalLayoutInner.svelte';
-	import GlobalLayoutMainVisual from '$lib/shared/ui/@layout-components/GlobalLayout/GlobalLayoutMainVisual.svelte';
+	import GlobalLayoutContents from '$lib/shared/ui/@layout-components/GlobalLayoutContents.svelte';
+	import GlobalLayoutInner from '$lib/shared/ui/@layout-components/GlobalLayoutInner.svelte';
+	import GlobalLayoutMainVisual from '$lib/shared/ui/@layout-components/GlobalLayoutMainVisual.svelte';
 </script>
 
 <main class="contents">

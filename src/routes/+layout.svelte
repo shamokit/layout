@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import GlobalLayout from '$lib/shared/ui/@layout-components/GlobalLayout/GlobalLayout.svelte';
+	import GlobalLayout from '$lib/shared/ui/@layout-components/GlobalLayout.svelte';
 	import './app.css';
 
 	let { children } = $props();

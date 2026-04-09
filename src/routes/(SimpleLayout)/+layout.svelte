@@ -1,10 +1,11 @@
 <script lang="ts">
-	import GlobalLayoutContents from '$lib/shared/ui/@layout-components/GlobalLayout/GlobalLayoutContents.svelte';
-	import GlobalLayoutFooter from '$lib/shared/ui/@layout-components/GlobalLayout/GlobalLayoutFooter.svelte';
-	import GlobalLayoutHeader from '$lib/shared/ui/@layout-components/GlobalLayout/GlobalLayoutHeader.svelte';
-	import GlobalLayoutInner from '$lib/shared/ui/@layout-components/GlobalLayout/GlobalLayoutInner.svelte';
+	import GlobalLayoutContents from '$lib/shared/ui/@layout-components/GlobalLayoutContents.svelte';
+	import GlobalLayoutHeader from '$lib/shared/ui/@layout-components/GlobalLayoutHeader.svelte';
+	import GlobalLayoutInner from '$lib/shared/ui/@layout-components/GlobalLayoutInner.svelte';
+	import SimpleFooter from '$lib/shared/ui/SimpleFooter/SimpleFooter.svelte';
+	import type { Snippet } from 'svelte';
 
-	let { children: main } = $props();
+	let { children }: { children: Snippet } = $props();
 </script>
 
 <GlobalLayoutHeader>
@@ -27,24 +28,11 @@
 			<GlobalLayoutInner>
 				{#snippet inner(props)}
 					<div {...props}>
-						{@render main()}
+						{@render children()}
 					</div>
 				{/snippet}
 			</GlobalLayoutInner>
 		</main>
 	{/snippet}
 </GlobalLayoutContents>
-<GlobalLayoutFooter>
-	{#snippet children({ footer, label })}
-		<footer {...footer.props}>
-			<p {...label.props} class="sr-only">global</p>
-			<GlobalLayoutInner>
-				{#snippet inner(innerProps)}
-					<div {...innerProps}>
-						<p>Footer</p>
-					</div>
-				{/snippet}
-			</GlobalLayoutInner>
-		</footer>
-	{/snippet}
-</GlobalLayoutFooter>
+<SimpleFooter />
